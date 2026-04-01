@@ -3,61 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Blog Personal</title>
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- CSS personalizado -->
+    <meta name="description" content="Blog de Martín Daniel Acosta — Analista en Ciberseguridad en el Banco de Tierra del Fuego, con más de 11 años de experiencia en TI.">
+    <title>Martín Daniel Acosta | Analista en Ciberseguridad</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <!-- Navbar (COMPLETAR: agregar logo, links activos, menú colapsable) -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar navbar-expand-lg navbar-blog" aria-label="Navegación principal">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Mi Blog</a>
-            <!-- TODO: agregar toggler y nav-items -->
+            <a class="navbar-brand navbar-blog__brand" href="index.html">
+                <span class="navbar-blog__logo-icon" aria-hidden="true">
+                    <i class="bi bi-shield-lock"></i>
+                </span>
+                <span>M.Acosta</span>
+            </a>
+            <button class="navbar-toggler navbar-blog__toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navMenuPrincipal"
+                    aria-controls="navMenuPrincipal" aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-blog__link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-blog__link" href="about.html">Acerca de mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-blog__link" href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero section -->
-    <header class="bg-gradient text-white py-5">
-        <div class="container text-center">
-            <h1 class="display-4">Bienvenido a Mi Blog</h1>
-            <p class="lead">Historias, tecnología y reflexiones</p>
+    <!-- ===================== HERO ===================== -->
+    <header class="hero-section" role="banner">
+        <div class="hero-section__grid" aria-hidden="true"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-8 col-lg-7">
+                    <p class="hero-section__greeting">// Hola, soy</p>
+                    <h1 class="hero-section__name">Martín<br>Acosta</h1>
+                    <p class="hero-section__title">
+                        <span class="hero-section__title-accent" aria-hidden="true">&gt;_</span>
+                        Analista en Ciberseguridad
+                    </p>
+                    <p class="hero-section__description">
+                        Analista en Ciberseguridad en el Banco de Tierra del Fuego.
+                        Más de 11 años en TI — 10 de ellos en la Municipalidad de Ushuaia —
+                        apasionado por la gestión de incidentes, análisis de riesgos
+                        y la protección de infraestructura crítica.
+                    </p>
+                    <div class="hero-section__actions">
+                        <a href="about.html" class="btn btn-accent">Ver perfil</a>
+                        <a href="contact.html" class="btn btn-outline-accent">Contactarme</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Main: listado de artículos -->
-    <main class="py-5">
-        <div class="container">
-            <h2 class="mb-4">Artículos Recientes</h2>
+    <!-- ===================== ARTÍCULOS ===================== -->
+    <main id="articulos">
+        <section class="articles-section" aria-labelledby="articulos-titulo">
+            <div class="container">
+                <header class="section-header text-center mb-5">
+                    <p class="section-header__label">// Blog</p>
+                    <h2 class="section-header__title" id="articulos-titulo">Últimos artículos</h2>
+                </header>
 
-            <!-- Grid de tarjetas (COMPLETAR: 3+ artículos) -->
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="assets/images/article-1.jpg" class="card-img-top" alt="Artículo 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Primer Artículo</h5>
-                            <p class="card-text text-muted">Autor: Tu Nombre</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
-                        </div>
+                <div class="row g-4">
+
+                    <!-- Artículo 1: Ciberseguridad -->
+                    <div class="col-12 col-md-4">
+                        <article class="card blog-card h-100" aria-labelledby="art-titulo-1">
+                            <div class="blog-card__image blog-card__image--cyber"
+                                 role="img"
+                                 aria-label="Ilustración abstracta de ciberseguridad Zero Trust"></div>
+                            <div class="card-body d-flex flex-column">
+                                <span class="blog-card__category">Ciberseguridad</span>
+                                <h3 class="blog-card__title card-title" id="art-titulo-1">
+                                    Zero Trust: El modelo que está transformando la seguridad corporativa
+                                </h3>
+                                <p class="blog-card__excerpt card-text">
+                                    El paradigma "nunca confíes, siempre verifica" está redefiniendo
+                                    cómo las organizaciones protegen sus activos críticos.
+                                    Principios fundamentales e implementación en entornos reales.
+                                </p>
+                                <div class="blog-card__footer mt-auto">
+                                    <span class="blog-card__date">
+                                        <i class="bi bi-calendar3" aria-hidden="true"></i>
+                                        20 mar, 2026
+                                    </span>
+                                    <a href="#" class="blog-card__link"
+                                       aria-label="Leer artículo completo sobre Zero Trust">
+                                        Leer más <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </div>
-                <!-- TODO: agregar 2 más -->
+
+                    <!-- Artículo 2: TI Municipal -->
+                    <div class="col-12 col-md-4">
+                        <article class="card blog-card h-100" aria-labelledby="art-titulo-2">
+                            <div class="blog-card__image blog-card__image--municipal"
+                                 role="img"
+                                 aria-label="Ilustración de digitalización del Estado"></div>
+                            <div class="card-body d-flex flex-column">
+                                <span class="blog-card__category">TI Municipal</span>
+                                <h3 class="blog-card__title card-title" id="art-titulo-2">
+                                    Digitalización del Estado: Reflexiones desde Tierra del Fuego
+                                </h3>
+                                <p class="blog-card__excerpt card-text">
+                                    Once años gestionando infraestructura tecnológica en la
+                                    Municipalidad de Ushuaia me dejaron lecciones que van
+                                    mucho más allá del software y el hardware.
+                                </p>
+                                <div class="blog-card__footer mt-auto">
+                                    <span class="blog-card__date">
+                                        <i class="bi bi-calendar3" aria-hidden="true"></i>
+                                        8 mar, 2026
+                                    </span>
+                                    <a href="#" class="blog-card__link"
+                                       aria-label="Leer artículo completo sobre digitalización del Estado">
+                                        Leer más <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Artículo 3: Seguridad pública -->
+                    <div class="col-12 col-md-4">
+                        <article class="card blog-card h-100" aria-labelledby="art-titulo-3">
+                            <div class="blog-card__image blog-card__image--threats"
+                                 role="img"
+                                 aria-label="Ilustración de amenazas informáticas en organismos públicos"></div>
+                            <div class="card-body d-flex flex-column">
+                                <span class="blog-card__category">Seguridad Pública</span>
+                                <h3 class="blog-card__title card-title" id="art-titulo-3">
+                                    Ciberseguridad en organismos públicos: Desafíos y estrategias clave
+                                </h3>
+                                <p class="blog-card__excerpt card-text">
+                                    Los organismos del Estado enfrentan un perfil de amenazas
+                                    particular: menores presupuestos, datos sensibles de ciudadanos
+                                    y procesos críticos que no pueden detenerse.
+                                </p>
+                                <div class="blog-card__footer mt-auto">
+                                    <span class="blog-card__date">
+                                        <i class="bi bi-calendar3" aria-hidden="true"></i>
+                                        25 feb, 2026
+                                    </span>
+                                    <a href="#" class="blog-card__link"
+                                       aria-label="Leer artículo completo sobre ciberseguridad en organismos públicos">
+                                        Leer más <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div><!-- /row -->
             </div>
-        </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p>&copy; 2026 Mi Blog. Todos los derechos reservados.</p>
-            <!-- TODO: agregar redes sociales -->
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <span class="site-footer__brand">Martín Daniel Acosta</span>
+                    <p class="site-footer__sub">Analista en Ciberseguridad &middot; Ushuaia, TDF</p>
+                </div>
+                <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                    <nav aria-label="Navegación secundaria del footer">
+                        <a href="index.html" class="site-footer__link">Inicio</a>
+                        <a href="about.html" class="site-footer__link">Acerca de mí</a>
+                        <a href="contact.html" class="site-footer__link">Contacto</a>
+                    </nav>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <div class="site-footer__social" role="list" aria-label="Redes sociales">
+                        <a href="https://www.linkedin.com/in/acosta-martin"
+                           class="site-footer__social-link"
+                           role="listitem"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Perfil de LinkedIn de Martín Daniel Acosta">
+                            <i class="bi bi-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:martin.acosta@email.com"
+                           class="site-footer__social-link"
+                           role="listitem"
+                           aria-label="Enviar email a Martín Daniel Acosta">
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="site-footer__copy text-center">
+                &copy; 2026 Martín Daniel Acosta &mdash; Todos los derechos reservados.
+            </p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 JS (bundle incluye Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
