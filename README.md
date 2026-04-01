@@ -1,136 +1,102 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/RI8vnIt_)
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23373696)
-# Mi Blog Personal - TP Semana 1
+# Blog Personal — Martín Acosta
 
-Página web de blog personal usando **HTML5**, **CSS3** y **Bootstrap 5**.
-
-## 📋 Requisitos
-
-- Navegador moderno (Chrome, Firefox, Safari, Edge)
-- Editor de código (VS Code recomendado)
-- Git
+Sitio web personal de blog desarrollado con **HTML5**, **CSS3** y **Bootstrap 5** como Trabajo Práctico N°1 de Laboratorio de Programación y Lenguajes — UNTDF.
 
 ## 🚀 Cómo abrir el proyecto
 
 1. **Clonar el repositorio**:
    ```bash
    git clone <URL_del_repositorio>
-   cd blog-personal
+   cd tp1_html
    ```
 
-2. **Abrir en navegador**:
-   - **Opción 1**: Doble-click en `index.html`
-   - **Opción 2**: Usar Live Server en VS Code (extensión)
-   - **Opción 3**: Python server:
+2. **Abrir en el navegador** (elegir una opción):
+   - Doble click en `index.html`
+   - Usar la extensión **Live Server** de VS Code (recomendado)
+   - Servidor Python:
      ```bash
-     python -m http.server 8000
-     # Luego accede a http://localhost:8000
+     python3 -m http.server 8000
+     # Accedé a http://localhost:8000
      ```
+
+## 🗺️ Navegación
+
+| Página | Archivo | Descripción |
+|--------|---------|-------------|
+| Inicio | `index.html` | Hero + listado de 3 artículos |
+| Acerca de mí | `about.html` | Perfil, experiencia y skills |
+| Contacto | `contact.html` | Formulario de contacto |
 
 ## 📁 Estructura del proyecto
 
 ```
-blog-personal/
-├── index.html          # Página principal (listado de artículos)
-├── about.html          # Página "Acerca de mí"
-├── contact.html        # Formulario de contacto
+tp1_html/
+├── index.html              # Página principal
+├── about.html              # Página "Acerca de mí"
+├── contact.html            # Formulario de contacto
 ├── assets/
-│   ├── styles.css      # Estilos personalizados
-│   └── images/         # Carpeta para imágenes (favicon, avatar, etc.)
-├── .github/
-│   └── workflows/
-│       └── validate.yml # Tests automatizados en GitHub Actions
-├── .gitignore
-└── README.md           # Este archivo
-
+│   ├── styles.css          # Estilos personalizados (dark/cyber theme)
+│   └── images/
+│       ├── favicon.svg     # Ícono del sitio (escudo + candado)
+│       └── avatar.jpg      # Foto de perfil (agregar manualmente)
+└── README.md               # Este archivo
 ```
 
-## ✅ Criterios de aceptación
+## 🖼️ Agregar la foto de perfil
 
-- **HTML válido**: Sin errores W3C. Verifica en https://validator.w3.org/
+Guardá tu foto como `assets/images/avatar.jpg`. La página `about.html` la carga automáticamente. Si no existe, muestra un ícono de placeholder sin romper el diseño.
+
+## ✅ Criterios de aceptación del TP
+
+- **HTML válido**: Sin errores W3C — validar en https://validator.w3.org/
+- **CSS válido**: Sin errores — validar en https://jigsaw.w3.org/css-validator/
 - **Todas las páginas funcionan**: Links internos sin 404
-- **Formulario funcional**: 
-  - Campos: nombre, email, teléfono (opcional), mensaje
-  - Validación HTML5 (`required`, `type="email"`, etc.)
-  - Feedback visual (:valid, :invalid estilos)
-- **Navbar responsiva**: Funciona en mobile y desktop
-- **Bootstrap bien usado**: Sin DIVs innecesarios que Bootstrap ya resuelve
-- **CSS limpio**: Sin duplicación, nombres claros
-- **Git**: ≥5 commits con mensajes significativos
-- **README**: Instrucciones claras (este archivo)
+- **Formulario**: campos nombre, email, teléfono (opcional) y mensaje con validación HTML5
+- **Feedback visual**: `:valid` en verde (`#00d4aa`), `:invalid` en rojo (`#ff4d6d`)
+- **Navbar responsiva**: menú colapsable funciona en mobile y desktop
+- **Bootstrap bien usado**: grid, cards, navbar, utilities
+- **CSS limpio**: variables CSS, clases BEM, sin duplicación
+- **Breadcrumbs** en `about.html` y `contact.html`
+- **Accesibilidad**: ARIA labels, contraste, `alt` en imágenes
 
-## 🎨 Customización
+## 🎨 Personalización
 
-### Cambiar colores
-Edita las variables en `assets/styles.css`:
-
+### Colores (en `assets/styles.css`):
 ```css
 :root {
-    --primary-color: #0d6efd;  /* Cambiar aquí */
-    --text-color: #212529;
-    --light-bg: #f8f9fa;
+    --accent:       #00d4aa;   /* Color principal (cyan/teal) */
+    --bg-primary:   #0a0e1a;   /* Fondo oscuro principal */
+    --text-primary: #e2e8f0;   /* Texto principal */
+    --error-color:  #ff4d6d;   /* Color :invalid */
 }
 ```
 
-### Agregar artículos
-En `index.html`, copia la tarjeta (`.card`) y modifica:
-- Imagen: `src="assets/images/article-X.jpg"`
-- Título, autor, descripción
-
-### Cambiar tipografía
-En `assets/styles.css`, modifica:
-```css
-body {
-    font-family: 'Tu fuente aquí', sans-serif;
-}
-```
+### Tipografía:
+- Títulos: **Space Grotesk** (Google Fonts)
+- Cuerpo: **Inter** (Google Fonts)
+- Monospace / código: **JetBrains Mono** (Google Fonts)
 
 ## 🧪 Validación
 
-### Validar HTML localmente
-Usa el validator de W3C: https://validator.w3.org/
+```bash
+# Abrir el validador y subir el archivo HTML
+# https://validator.w3.org/#validate_by_upload+with_options
 
-### Validar CSS
-Usa el CSS Validator: https://jigsaw.w3.org/css-validator/
-
-### GitHub Actions
-Cada vez que hagas `git push`, se ejecutan tests automáticos. Verifica el estado en la pestaña "Actions" de tu repositorio.
-
-## 💡 Pistas útiles
-
-### 1. **Navbar responsiva**
-Bootstrap proporciona `.navbar-collapse` y `.navbar-toggler`. Úsalos para que el menú se oculte en mobile.
-
-### 2. **Grid responsivo**
-Para 3 columnas en desktop, 1 en mobile:
-```html
-<div class="col-12 col-md-4">...</div>
+# O validar por URL si tenés el sitio publicado
+# https://validator.w3.org/#validate_by_uri
 ```
 
-### 3. **Formulario accesible**
-Cada `<input>` debe tener un `<label>` asociado con `for` y `id`.
+## 📚 Recursos utilizados
 
-### 4. **CSS sobre Bootstrap**
-Tu `assets/styles.css` se importa DESPUÉS de Bootstrap, así que tus estilos lo sobrescriben. Usa clases personalizadas (BEM) para no romper componentes Bootstrap.
-
-## 📚 Recursos
-
-- [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/)
-- [MDN: HTML](https://developer.mozilla.org/es/docs/Web/HTML)
+- [Bootstrap 5](https://getbootstrap.com/docs/5.3/)
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
+- [Google Fonts – Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
+- [MDN: HTML5](https://developer.mozilla.org/es/docs/Web/HTML)
 - [MDN: CSS](https://developer.mozilla.org/es/docs/Web/CSS)
-- [W3C HTML Validator](https://validator.w3.org/)
-
-## 🐛 Problemas comunes
-
-| Problema | Solución |
-|----------|----------|
-| Navbar no responde | Verifica que hayas importado Bootstrap JS al final de `</body>` |
-| Estilos CSS no aparecen | Limpia cache (Ctrl+Shift+R) o abre en navegación privada |
-| Formulario no valida | Asegúrate de usar atributos `required`, `type="email"`, etc. |
-| Bootstrap no carga (CDN) | Verifica conexión a internet o descarga Bootstrap localmente |
 
 ---
 
-**Autor**: [Tu nombre]  
-**Fecha**: 2026-03-13  
-**Estado**: En desarrollo
+**Autor**: Martín Acosta  
+**Carrera**: Analista Universitario de Sistemas — UNTDF  
+**Materia**: Laboratorio de Programación y Lenguajes  
+**Entrega**: 31/03/2026
