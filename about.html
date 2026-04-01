@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conocé a Martín Daniel Acosta — Analista en Ciberseguridad en el Banco de Tierra del Fuego, con más de 11 años de experiencia en TI.">
+    <title>Acerca de mí | Martín Daniel Acosta</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar navbar-expand-lg navbar-blog" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand navbar-blog__brand" href="index.html">
+                <span class="navbar-blog__logo-icon" aria-hidden="true">
+                    <i class="bi bi-shield-lock"></i>
+                </span>
+                <span>M.Acosta</span>
+            </a>
+            <button class="navbar-toggler navbar-blog__toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navMenuAbout"
+                    aria-controls="navMenuAbout" aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenuAbout">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-blog__link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-blog__link active" aria-current="page" href="about.html">Acerca de mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-blog__link" href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== BREADCRUMBS ===================== -->
+    <div class="breadcrumb-wrapper" aria-label="Ruta de navegación">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-blog mb-0">
+                    <li class="breadcrumb-item">
+                        <a href="index.html"><i class="bi bi-house-door" aria-hidden="true"></i> Inicio</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Acerca de mí</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ===================== HERO ABOUT ===================== -->
+    <header class="about-hero" role="banner">
+        <div class="about-hero__grid" aria-hidden="true"></div>
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <!-- Foto -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="about-hero__photo-wrapper">
+                        <img src="assets/images/avatar.jpg"
+                             alt="Foto de perfil de Martín Daniel Acosta, Analista en Ciberseguridad"
+                             class="about-hero__photo"
+                             onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='flex';">
+                        <div id="avatar-placeholder"
+                             class="about-hero__photo-placeholder"
+                             style="display:none;"
+                             role="img"
+                             aria-label="Foto de perfil de Martín Daniel Acosta">
+                            <i class="bi bi-person" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div class="col-12 col-md-8 col-lg-9">
+                    <p class="about-hero__label">// Perfil profesional</p>
+                    <h1 class="about-hero__name">Martín Daniel Acosta</h1>
+                    <p class="about-hero__title">&gt;_ Analista en Ciberseguridad</p>
+                    <p class="about-hero__bio">
+                        Profesional de TI con más de 10 años de experiencia, actualmente
+                        especializado en Ciberseguridad dentro del sector bancario. Formo parte
+                        del área de Protección de Activos Informáticos del Banco Tierra del Fuego,
+                        alineando procesos con normativas del BCRA y marcos de referencia NIST CSF.
+                        Me interesa seguir desarrollándome en roles vinculados a ciberseguridad,
+                        análisis técnico y gestión de incidentes.
+                    </p>
+                    <p class="about-hero__location">
+                        <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                        Ushuaia, Tierra del Fuego — Argentina
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="contact.html" class="btn btn-accent">Contactarme</a>
+                        <a href="https://www.linkedin.com/in/acosta-martin"
+                           class="btn btn-outline-accent"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Ver perfil de LinkedIn de Martín Daniel Acosta (abre en nueva pestaña)">
+                            <i class="bi bi-linkedin me-2" aria-hidden="true"></i>LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===================== EXPERIENCIA ===================== -->
+        <section class="about-section" aria-labelledby="experiencia-titulo">
+            <div class="container">
+                <div class="row g-5">
+
+                    <!-- Timeline de experiencia -->
+                    <div class="col-12 col-lg-7">
+                        <p class="section-header__label">// Trayectoria</p>
+                        <h2 class="section-header__title mb-4" id="experiencia-titulo">Experiencia</h2>
+
+                        <div class="experience-card">
+                            <p class="experience-card__period">
+                                <i class="bi bi-calendar3" aria-hidden="true"></i>
+                                Mar. 2024 &mdash; Presente &nbsp;|&nbsp; 2 años 1 mes
+                            </p>
+                            <h3 class="experience-card__title">Analista en Ciberseguridad</h3>
+                            <p class="experience-card__company">
+                                <i class="bi bi-building" aria-hidden="true"></i>
+                                Banco de Tierra del Fuego &mdash; Jornada completa
+                            </p>
+                            <p class="experience-card__description">
+                                Parte del área de Protección de Activos Informáticos. Gestión
+                                de incidentes, análisis de riesgos y monitoreo mediante SIEM y EDR.
+                                Alineación de procedimientos con normativas del BCRA y marcos
+                                NIST CSF. Colaboración en respuesta a reportes de phishing y
+                                eventos de seguridad, contribuyendo a la conciencia y protección
+                                institucional frente a amenazas.
+                            </p>
+                        </div>
+
+                        <div class="experience-card">
+                            <p class="experience-card__period">
+                                <i class="bi bi-calendar3" aria-hidden="true"></i>
+                                Ene. 2014 &mdash; Mar. 2024 &nbsp;|&nbsp; 11 años 3 meses
+                            </p>
+                            <h3 class="experience-card__title">Técnico de TIC</h3>
+                            <p class="experience-card__company">
+                                <i class="bi bi-building" aria-hidden="true"></i>
+                                Municipalidad de Ushuaia &mdash; Jornada completa, Presencial
+                            </p>
+                            <p class="experience-card__description">
+                                Soporte técnico e infraestructura: despliegue de ecosistema VMware,
+                                administración Linux, servicios LDAP y CUPS, políticas de respaldo
+                                y continuidad operativa. Instalación masiva de equipos Conectar
+                                Igualdad. Responsable Técnico de la Autoridad de Registro de
+                                Firma Digital Remota (AC Modernización PDFR) — emisión de
+                                certificados digitales y autenticación por token bajo el marco
+                                AC ONTI–INAP.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Educación y certificaciones -->
+                    <div class="col-12 col-lg-5">
+                        <p class="section-header__label">// Formación</p>
+                        <h2 class="section-header__title mb-4">Educación</h2>
+
+                        <div class="experience-card mb-3">
+                            <p class="experience-card__period">En curso</p>
+                            <h3 class="experience-card__title">Licenciatura en Sistemas</h3>
+                            <p class="experience-card__company">
+                                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                                UNTDF — Universidad Nacional de Tierra del Fuego
+                            </p>
+                        </div>
+
+                        <div class="experience-card mb-3">
+                            <p class="experience-card__period">En curso &mdash; Título intermedio obtenido</p>
+                            <h3 class="experience-card__title">Tecnicatura Superior en Seguridad Informática</h3>
+                            <p class="experience-card__company">
+                                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                                Universidad Siglo 21 / Teclab
+                            </p>
+                            <p class="experience-card__description" style="font-size:0.82rem;">
+                                Título intermedio: <strong style="color:var(--accent)">Auxiliar en Administración de Seguridad Informática</strong>
+                            </p>
+                        </div>
+
+                        <div class="experience-card mb-3">
+                            <p class="experience-card__period">Completado</p>
+                            <h3 class="experience-card__title">Diplomatura en Redes e Infraestructura</h3>
+                            <p class="experience-card__company">
+                                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                                Universidad Tecnológica Nacional (UTN)
+                            </p>
+                            <p class="experience-card__description" style="font-size:0.82rem;">
+                                Máquinas virtuales, Packet Tracer, redes TCP/IP.
+                            </p>
+                        </div>
+
+                        <div class="experience-card mb-4">
+                            <p class="experience-card__period">Completado</p>
+                            <h3 class="experience-card__title">Programación Full Stack – Python</h3>
+                            <p class="experience-card__company">
+                                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                                T.TEC Tierra del Fuego &mdash; Cert. por Min. de Trabajo y UNTDF
+                            </p>
+                        </div>
+
+                        <p class="section-header__label mt-2">// Certificaciones Cisco</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="skill-badge"><i class="bi bi-patch-check me-1" aria-hidden="true"></i>English for IT 1</span>
+                            <span class="skill-badge"><i class="bi bi-patch-check me-1" aria-hidden="true"></i>Intro Cybersecurity</span>
+                        </div>
+
+                        <p class="section-header__label mt-4">// Habilidades técnicas</p>
+                        <h2 class="section-header__title mb-3">Skills</h2>
+
+                        <div class="mb-3">
+                            <p class="form-label-blog mb-2">Seguridad</p>
+                            <div>
+                                <span class="skill-badge">Análisis de Riesgos</span>
+                                <span class="skill-badge">SIEM</span>
+                                <span class="skill-badge">EDR</span>
+                                <span class="skill-badge">Gestión de Incidentes</span>
+                                <span class="skill-badge">NIST CSF</span>
+                                <span class="skill-badge">Normativa BCRA</span>
+                                <span class="skill-badge">Firma Digital</span>
+                                <span class="skill-badge">Phishing Response</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="form-label-blog mb-2">Infraestructura</p>
+                            <div>
+                                <span class="skill-badge">Redes TCP/IP</span>
+                                <span class="skill-badge">Linux</span>
+                                <span class="skill-badge">VMware</span>
+                                <span class="skill-badge">Windows Server</span>
+                                <span class="skill-badge">LDAP</span>
+                                <span class="skill-badge">Firewall</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="form-label-blog mb-2">Desarrollo</p>
+                            <div>
+                                <span class="skill-badge">Python</span>
+                                <span class="skill-badge">HTML5</span>
+                                <span class="skill-badge">CSS3</span>
+                                <span class="skill-badge">Git</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CTA ===================== -->
+        <section class="about-section about-section--alt py-5" aria-labelledby="cta-titulo">
+            <div class="container text-center">
+                <p class="section-header__label">// ¿Hablamos?</p>
+                <h2 class="section-header__title mb-3" id="cta-titulo">¿Tenés un proyecto o consulta?</h2>
+                <p class="text-secondary mb-4" style="max-width:480px; margin:0 auto;">
+                    Si querés hablar sobre seguridad informática, colaborar en algún proyecto
+                    o simplemente hacer una consulta, escribime.
+                </p>
+                <a href="contact.html" class="btn btn-accent">Ir al formulario de contacto</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <span class="site-footer__brand">Martín Daniel Acosta</span>
+                    <p class="site-footer__sub">Analista en Ciberseguridad &middot; Ushuaia, TDF</p>
+                </div>
+                <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                    <nav aria-label="Navegación secundaria del footer">
+                        <a href="index.html" class="site-footer__link">Inicio</a>
+                        <a href="about.html" class="site-footer__link">Acerca de mí</a>
+                        <a href="contact.html" class="site-footer__link">Contacto</a>
+                    </nav>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <div class="site-footer__social" role="list" aria-label="Redes sociales">
+                        <a href="https://www.linkedin.com/in/acosta-martin"
+                           class="site-footer__social-link"
+                           role="listitem"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Perfil de LinkedIn de Martín Daniel Acosta">
+                            <i class="bi bi-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:martin.acosta@email.com"
+                           class="site-footer__social-link"
+                           role="listitem"
+                           aria-label="Enviar email a Martín Daniel Acosta">
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="site-footer__copy text-center">
+                &copy; 2026 Martín Daniel Acosta &mdash; Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
