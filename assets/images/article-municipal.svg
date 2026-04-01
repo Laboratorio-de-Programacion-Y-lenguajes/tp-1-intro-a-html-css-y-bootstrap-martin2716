@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Fondo gradiente -->
+  <defs>
+    <linearGradient id="bgMunicipal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1e30;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#081527;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowMunicipal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(0,150,212,0.12);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(0,150,212,0);stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bgMunicipal)"/>
+  <rect width="400" height="300" fill="url(#glowMunicipal)"/>
+  
+  <!-- Grid subtle -->
+  <defs>
+    <pattern id="gridMun" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,150,212,0.08)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#gridMun)" />
+  
+  <!-- Edificio/Municipalidad -->
+  <g transform="translate(200, 140)">
+    <!-- Edificio principal -->
+    <rect x="-40" y="-50" width="80" height="95" fill="none" stroke="#0096d4" stroke-width="2" opacity="0.7"/>
+    
+    <!-- Ventanas -->
+    <rect x="-35" y="-45" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    <rect x="-18" y="-45" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    <rect x="-1" y="-45" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    <rect x="16" y="-45" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    
+    <rect x="-35" y="-25" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    <rect x="-18" y="-25" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    <rect x="-1" y="-25" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    <rect x="16" y="-25" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    
+    <rect x="-35" y="-5" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    <rect x="-18" y="-5" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    <rect x="-1" y="-5" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    <rect x="16" y="-5" width="12" height="12" fill="none" stroke="#0096d4" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Techo triangular -->
+    <polygon points="-40,-50 0,-65 40,-50" fill="none" stroke="#0096d4" stroke-width="2" opacity="0.7"/>
+    
+    <!-- Antena/Torre (tech) -->
+    <line x1="0" y1="-65" x2="0" y2="-85" stroke="#0096d4" stroke-width="2" opacity="0.6"/>
+    <circle cx="0" cy="-85" r="3" fill="#0096d4" opacity="0.7"/>
+    
+    <!-- Puerta principal -->
+    <rect x="-12" y="40" width="24" height="35" fill="none" stroke="#0096d4" stroke-width="2" opacity="0.8"/>
+    <line x1="0" y1="40" x2="0" y2="75" stroke="#0096d4" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <!-- Señal WiFi (conectividad digital) -->
+  <g transform="translate(300, 80)" opacity="0.5">
+    <path d="M -2 0 Q -6 -6 -10 -10" fill="none" stroke="#0096d4" stroke-width="1.5"/>
+    <path d="M -2 -2 Q -8 -8 -14 -14" fill="none" stroke="#0096d4" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="2" fill="#0096d4"/>
+  </g>
+  
+  <!-- Puntos de datos -->
+  <circle cx="100" cy="220" r="2.5" fill="#0096d4" opacity="0.4"/>
+  <circle cx="320" cy="240" r="2" fill="#0096d4" opacity="0.3"/>
+</svg>
